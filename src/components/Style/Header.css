@@ -1,0 +1,8 @@
+.eso-farm-header{
+    display: flex;
+    color: white;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
