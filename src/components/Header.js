@@ -1,19 +1,38 @@
-import '../components/Style/Header.css'
-const Header = () =>{
+import React from 'react';
+import './Style/Header.css';  
 
-    return (
-        <div className="eso-farm-header">
-            <img src="" alt="" />
-            <h3 className="header-h3">Home</h3>
-            <h3 className="header-h3">Activities</h3>
-            <h3 className="header-h3">Media</h3>
-            <h3 className="header-h3">About Us</h3>
-            <h3 className="header-h3">Contact Us</h3>
-            <button className="btn">Enquiries</button>
-            <div className="chat-with-us">chatWithUs</div>
-            </div>
-    )
+const Header = () => {
+  return (
+    <header className="header-container">
+      <img src="https://static.vecteezy.com/system/resources/previews/000/566/844/original/cute-pig-icon-vector.jpg" alt="Logo" className="logo" />
 
-}
+      <nav className="nav-menu">
+        <a href="/">Home</a>
 
-export default Header
+        <div className="dropdown-container">
+          <button className="dropdown-button">About the Ministry</button>
+          <div className="dropdown-content">
+            <a href="/mission">Mission</a>
+            <a href="/vision">Vision</a>
+          </div>
+        </div>
+
+        <a href="/agric-lands">Agric Lands</a>
+
+        <div className="dropdown-container">
+          <button className="dropdown-button">Activities</button>
+          <div className="dropdown-content">
+            <a href="/projects">Projects</a>
+            <a href="/events">Events</a>
+          </div>
+        </div>
+
+        <a href="/agric-kids" className="agric-kids-link">Agric Kids</a>
+      </nav>
+
+      <button className="enquiry-button">ENQUIRIES</button>
+    </header>
+  );
+};
+
+export default Header;
